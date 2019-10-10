@@ -23,28 +23,34 @@ app.controller('customersCtrl', function($scope, $http) {
     }
 
 });
+var getPresentDate = function() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd
+    }
+    if (mm < 10) {
+        mm = '0' + mm
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+    // document.getElementById("toDate").setAttribute("value", today);
+    // document.getElementById("fromDate").setAttribute("value", today);
+    return today;
+}
 var setMaxDate = function(id) {
     if (document.getElementById("toDate").value != "") {
         var x = document.getElementById("toDate").value;
         document.getElementById(id).setAttribute("max", x);
     } else {
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1;
-        var yyyy = today.getFullYear();
-        if (dd < 10) {
-            dd = '0' + dd
-        }
-        if (mm < 10) {
-            mm = '0' + mm
-        }
-        today = yyyy + '-' + mm + '-' + dd;
+        var today = getPresentDate();
         document.getElementById(id).setAttribute("max", today);
     }
 }
 
 function setMinDate() {
-
     var minDate = document.getElementById("fromDate").value;
     document.getElementById("toDate").setAttribute("min", minDate);
 }
