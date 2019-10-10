@@ -1,4 +1,6 @@
-table, th , td  {
+table,
+th,
+td {
     border: 1px solid grey;
     border-collapse: collapse;
     padding: 5px;
@@ -14,6 +16,7 @@ table tr:nth-child(even) {
     background-color: #ffffff;
 }
 
+<<<<<<< HEAD
 ul {
     list-style-type: none;
     margin: 0;
@@ -51,10 +54,18 @@ li a:hover{
 }
 
 .main{
+=======
+.logs {
+    display: none;
+    /* justify-content: center; */
+}
+
+.main {
+>>>>>>> f3f530f23645f39383238e7711e905478582a8f2
     text-align: center;
 }
 
-.filters{
+.filters {
     margin: 10px;
     display: none;
 }

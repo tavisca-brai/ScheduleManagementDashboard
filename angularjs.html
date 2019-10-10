@@ -8,43 +8,42 @@
 
 <body ng-app="myApp">
 
-  <div ng-controller="customersCtrl" class="main"> 
+    <div ng-controller="customersCtrl" class="main">
 
-    <select ng-options="option for option in listOfOptions" 
-            ng-model="selectedItem"
-            ng-change="selectedItemChanged()">
+        <select ng-options="option for option in listOfOptions" ng-model="selectedItem" ng-change="selectedItemChanged()">
     </select>
 
-    <div class="filters">
-      <table>
-        <tr>
-          <td>
-            <select>
+        <div class="filters">
+            <table>
+                <tr>
+                    <td>
+                        <select>
               <option>All</option>
               <option>Demp2</option>
               <option>CapitalOne</option>
             </select>
-          </td>
-          <td>
-            From: <input type="date" name="fromDate">
-          </td>
-          <td>
-            To: <input type="date" name="toDate">
-          </td>
-          <td>
-            <select>
+                    </td>
+                    <td>
+                        From: <input type="date" name="fromDate" max="" value="fromDate" id="fromDate" onclick="setMaxDate('fromDate')">
+                    </td>
+                    <td>
+                        To: <input type="date" name="toDate" max="" min="" id="toDate" onclick="setMaxDate('toDate');setMinDate()">
+                    </td>
+                    <td>
+                        <select>
                 <option>Both</option>
                 <option>User</option>
                 <option>Agent</option>
             </select>
-          </td>
-          <td>
-            <button ng-click="generateReport()">Generate Report</button>
-          </td>
-        </tr>
-      </table>
-    </div>
+                    </td>
+                    <td>
+                        <button ng-click="generateReport()">Generate Report</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
+<<<<<<< HEAD
     <div class="logs">
       
       <div class="nav">
@@ -73,7 +72,29 @@
       </table>
       <button onclick="exportTableToCSV('logs.csv')">Export CSV</button>
     </div>
+=======
+        <div class="logs">
+            <table id="log">
+                <tr>
+                    <td>Schedule Change</td>
+                    <td colspan="2">Total:{{names.data.length}}</td>
+                </tr>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+                <tr ng-repeat="x in names.data">
+                    <td>{{ x.id }}</td>
+                    <td>{{ x.first_name }}</td>
+                    <td>{{ x.last_name }}</td>
+                </tr>
+            </table>
+            <button>Export CSV</button>
+        </div>
+>>>>>>> f3f530f23645f39383238e7711e905478582a8f2
 
-  </div>
+    </div>
 </body>
+
 </html>
