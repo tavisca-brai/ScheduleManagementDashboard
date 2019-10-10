@@ -6,7 +6,7 @@
 
 <link rel="stylesheet" href="style.css">
 
-<body ng-app="myApp">
+<body onload="getPresentDate()" ng-app="myApp">
 
     <div ng-controller="customersCtrl" class="main">
 
@@ -47,17 +47,27 @@
             <table id="log">
                 <tr>
                     <td>Schedule Change</td>
-                    <td colspan="2">Total:{{names.data.length}}</td>
+                    <td colspan="6">Total:{{names.length}}</td>
                 </tr>
                 <tr>
-                    <th>Sr. No.</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>GDS Locator</th>
+                    <th>Super PNR</th>
+                    <th>Client</th>
+                    <th>User Type</th>
+                    <th>Session ID</th>
+                    <th>SC Accepted Date Time</th>
+                    <th>Status</th>
+
                 </tr>
-                <tr ng-repeat="x in names.data">
-                    <td>{{ x.id }}</td>
-                    <td>{{ x.first_name }}</td>
-                    <td>{{ x.last_name }}</td>
+                <tr ng-repeat="x in names">
+                    <td>{{ x.GDS_Locator }}</td>
+                    <td>{{ x.Super_PNR }}</td>
+                    <td>{{ x.Client }}</td>
+                    <td>{{ x.User_Type }}</td>
+                    <td>{{ x.Session_ID }}</td>
+                    <td>{{ x.SC_Accepted_Date_Time }}</td>
+                    <td>{{ x.Status }}</td>
+
                 </tr>
             </table>
             <button>Export CSV</button>
