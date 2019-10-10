@@ -9,12 +9,13 @@ app.controller('customersCtrl', function($scope, $http) {
         document.getElementsByClassName('filters')[0].style.display = 'block';
     }
 
-    $scope.generateReport = function() {
-        switch (calculatedValue) {
+    $scope.generateReport = function() { switch (calculatedValue) {
             case 'SC':
-                $http.get("https://reqres.in/api/users?page=1")
-                    .then(function(response) { $scope.names = response.data; });
-                console.log($scope.names);
+                $http.get('http://127.0.0.1:5500/Mock.json')
+                    .then(function(response) {
+                        $scope.names = response.data.SC;
+                        console.log($scope.names);
+                    });
                 document.getElementsByClassName('logs')[0].style.display = 'block';
                 break;
             default:
