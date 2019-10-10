@@ -36,8 +36,8 @@ var getPresentDate = function() {
     }
 
     today = yyyy + '-' + mm + '-' + dd;
-    // document.getElementById("toDate").setAttribute("value", today);
-    // document.getElementById("fromDate").setAttribute("value", today);
+    document.getElementById("toDate").setAttribute("value", today);
+    document.getElementById("fromDate").setAttribute("value", today);
     return today;
 }
 var setMaxDate = function(id) {
