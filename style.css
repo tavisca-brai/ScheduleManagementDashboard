@@ -1,4 +1,6 @@
-table, th , td  {
+table,
+th,
+td {
     border: 1px solid grey;
     border-collapse: collapse;
     padding: 5px;
@@ -14,16 +16,16 @@ table tr:nth-child(even) {
     background-color: #ffffff;
 }
 
-.logs{
-    display: none;    
+.logs {
+    display: none;
     /* justify-content: center; */
 }
 
-.main{
+.main {
     text-align: center;
 }
 
-.filters{
+.filters {
     margin: 10px;
     display: none;
 }
