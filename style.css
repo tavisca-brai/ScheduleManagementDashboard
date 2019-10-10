@@ -14,9 +14,40 @@ table tr:nth-child(even) {
     background-color: #ffffff;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(197, 190, 190);
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover{
+    background-color: rgb(160, 247, 175);
+}
+
 .logs{
     display: none;  
+    width: auto;
     /* justify-content: center; */
+}
+
+.nav{
+    width: 936px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main{
