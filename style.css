@@ -15,7 +15,7 @@ table tr:nth-child(even) {
 }
 
 .logs{
-    display: none;    
+    display: none;  
     /* justify-content: center; */
 }
 
